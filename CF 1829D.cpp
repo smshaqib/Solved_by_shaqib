@@ -48,21 +48,42 @@ const int mx = 2e5+123;
 int a[mx];
 ll sum[mx];
 
+
+int fun(int n,int cmp){
+
+    int a = n/3, b = n*2/3;
+
+    if(n==cmp){
+        return 1;
+    }
+
+    else if(n%3!=0){
+        return 0;
+    }
+
+    else{
+
+        return (fun(a,cmp)) || (fun(b,cmp));
+    }
+
+
+}
+
 void solve(){
 
-    int a1,a2,b1,b2;
-    cin>>a1>>b1>>a2>>b2;
+    int n,m;
+    cin>>n>>m;
 
-    if(a1>b1)swap(a1,b1);
 
-    if(a2>b2)swap(a2,b2);
-
-    if(a1+a2==b1 && a1+a2==b2){
-        cout<<"Yes"<<endl;
+    if(n<m){
+        NO
+        return;
     }
-    else{
-        cout<<"No"<<endl;
-    }
+
+    int ans = fun(n,m);
+
+    if(ans)YES
+    else NO
 }
 
 int main()
@@ -71,6 +92,8 @@ int main()
 
     int t; cin>>t; while(t--)solve();
 
+
+//    cout<<gcd(12,18);
     return 0;
 }
 

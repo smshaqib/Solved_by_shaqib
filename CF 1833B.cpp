@@ -48,21 +48,40 @@ const int mx = 2e5+123;
 int a[mx];
 ll sum[mx];
 
+
 void solve(){
 
-    int a1,a2,b1,b2;
-    cin>>a1>>b1>>a2>>b2;
+    int n,k;
+    cin>>n>>k;
 
-    if(a1>b1)swap(a1,b1);
+    pair<ll,ll> a [n];
 
-    if(a2>b2)swap(a2,b2);
+    int b[n];
 
-    if(a1+a2==b1 && a1+a2==b2){
-        cout<<"Yes"<<endl;
+    int ans[n];
+
+    for(int i=0; i<n; i++){
+        cin>>a[i].first;
+        a[i].second = i;
     }
-    else{
-        cout<<"No"<<endl;
+
+    for(int i=0; i<n; i++){
+        cin>>b[i];
     }
+
+    sort(a,a+n);
+    sort(b,b+n);
+
+
+    for(int i=0; i<n; i++){
+
+        ans[a[i].second] = b[i];
+    }
+
+
+    for(int i=0; i<n; i++)cout<<ans[i]<<" ";
+    cout<<endl;
+
 }
 
 int main()

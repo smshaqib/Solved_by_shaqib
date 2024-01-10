@@ -50,26 +50,30 @@ ll sum[mx];
 
 void solve(){
 
-    int a1,a2,b1,b2;
-    cin>>a1>>b1>>a2>>b2;
+    int n,m;
+    cin>>n>>m;
 
-    if(a1>b1)swap(a1,b1);
+    int day = 0;
 
-    if(a2>b2)swap(a2,b2);
+    int socks = n;
 
-    if(a1+a2==b1 && a1+a2==b2){
-        cout<<"Yes"<<endl;
+
+    while(socks){
+
+        socks--;
+        day++;
+
+        if(day%m==0)socks++;
     }
-    else{
-        cout<<"No"<<endl;
-    }
+
+    cout<<day<<endl;
 }
 
 int main()
 {
     optimize();
 
-    int t; cin>>t; while(t--)solve();
+    solve();
 
     return 0;
 }
