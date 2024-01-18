@@ -50,27 +50,30 @@ ll sum[mx];
 
 void solve(){
 
-    string s;
-    cin>>s;
+    int n;
+    cin>>n;
 
-    string a,b;
+    vi a(n);
 
-    for(int i=0; i<s.length()-1; i++){
+    for(int i=0; i<n; i++)cin>>a[i];
 
-        a+=s[i];
-        b = "";
 
-        for(int j=i+1; j<s.length() ; j++){
-            b+=s[j];
-        }
 
-        if(b[0]!='0' && stoi(a)<stoi(b)){
-            cout<<a<<" "<<b<<endl;
-            return;
-        }
+    if(is_sorted(a.begin(),a.end())){
+        cout<<0<<endl;
+        return;
     }
 
-    cout<<-1<<endl;
+    else if(a[0]==1 || a[n-1]==n){
+        cout<<1<<endl;
+    }
+    else if(a[0]==n && a[n-1]==1){
+        cout<<3<<endl;
+    }
+    else{
+        cout<<2<<endl;
+    }
+
 }
 
 int main()
