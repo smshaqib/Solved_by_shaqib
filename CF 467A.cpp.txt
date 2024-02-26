@@ -1,0 +1,80 @@
+      ---            In the name of ALLAH           ---      
+#includebitsstdc++.h
+using namespace std;
+
+typedef long long ll;
+typedef vectorint vi;
+typedef vectorll vl;
+typedef vectorvi vvi;
+typedef vectorvl vvl;
+typedef pairint,int pii;
+typedef pairdouble, double pdd;
+typedef pairll, ll pll;
+typedef vectorpii vii;
+typedef vectorpll vll;
+typedef double dl;
+
+#define endl 'n'
+#define PB push_back
+#define F first
+#define S second
+#define all(a) (a).begin(),(a).end()
+#define rall(a) (a).rbegin(),(a).rend()
+#define sz(x) (int)x.size()
+#define YES printf(YESn);
+#define NO printf(NOn);
+
+const double PI = acos(-1);
+const double eps = 1e-9;
+const int inf = 2000000000;
+const ll infLL = 9000000000000000000;
+#define MOD 1000000007
+
+#define mem(a,b) memset(a, b, sizeof(a) )
+#define sqr(a) ((a)  (a))
+
+#define optimize() ios_basesync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define fraction() cout.unsetf(iosfloatfield); cout.precision(10); cout.setf(iosfixed,iosfloatfield);
+#define file() freopen(input.txt,r,stdin);freopen(output.txt,w,stdout);
+
+#define dbg(args...) do {cerr  #args    ; faltu(args); } while(0)
+void faltu () {            cerr  endl;}
+template  typename T, typename ... hellovoid faltu( T arg, const hello &... rest) {cerr  arg  ' ';faltu(rest...);}
+
+ll gcd ( ll a, ll b ) { return __gcd ( a, b ); }
+ll lcm ( ll a, ll b ) { return a  ( b  gcd ( a, b ) ); }
+
+const int mx = 2e5+123;
+int a[mx];
+ll sum[mx];
+
+void solve(){
+
+
+}
+
+int main()
+{
+    optimize();
+
+    int t;
+    cint;
+
+    int c=0;
+
+    while(t--){
+
+        int a,b;
+        cinab;
+
+        if(abs(a-b)=2){
+            c++;
+        }
+
+    }
+
+    coutcendl;
+
+    return 0;
+}
+
