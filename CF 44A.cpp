@@ -1,4 +1,4 @@
-///   ***   ---            In the name of ALLAH        |   ---   ***   ///
+///   ***   ---            In the name of ALLAH           ---   ***   ///
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -33,6 +33,8 @@ const ll infLL = 9000000000000000000;
 #define mem(a,b) memset(a, b, sizeof(a) )
 #define sqr(a) ((a) * (a))
 
+#define fin(a,n) for(int i=0; i<n; i++){cin>>a[i];}
+
 #define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 #define fraction() cout.unsetf(ios::floatfield); cout.precision(10); cout.setf(ios::fixed,ios::floatfield);
 #define file() freopen("input.txt","r",stdin);freopen("output.txt","w",stdout);
@@ -50,22 +52,10 @@ ll sum[mx];
 
 void solve(){
 
-    ll n;
-    cin>>n;
 
-    set<string>s;
 
-    while(n--){
 
-        string a,b;
-        cin>>a>>b;
 
-        string c = a+b;
-
-        s.insert(c);
-    }
-
-    cout<<s.size()<<endl;
 
 }
 
@@ -73,10 +63,26 @@ int main()
 {
     optimize();
 
-    solve();
+    int n;
+    cin>>n;
+
+    vector <pair<string,string>> p(n) ;
+
+
+    for(int i=0; i<n; i++){
+
+        cin>>p[i].first>>p[i].second;
+
+    }
+
+    sort(p.begin(),p.end());
+
+    int unq = unique(p.begin(),p.end())-p.begin();
+    cout<<unq<<endl;
 
     return 0;
 }
+
 
 
 
